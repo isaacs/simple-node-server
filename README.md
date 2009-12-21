@@ -16,3 +16,4 @@ Next:
 * ejs and markdown parsers
 * some scripts to wrap up the core server, and do stuff like start, stop, point &2 at a log file, etc.
 * url-to-function routing goodness
+* Documentation!
