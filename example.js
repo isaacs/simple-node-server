@@ -8,7 +8,7 @@ sns.start({
     sns.errorServer(400, "You sent a request this server doesn't grok")
   ],
   docroot : require("path").join(__filename, "../www"),
-  port : 80,
+  port : 8000,
   indexFiles : [
     "index.ejs",
     "index.html",
