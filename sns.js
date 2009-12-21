@@ -1,9 +1,9 @@
 
-var sns = exports;
-
-process.mixin(sns,
-  require("./lib/file-server"),
-  require("./lib/directory-index"),
-  require("./lib/error"),
-  require("./lib/core")
+// just load up the modules
+process.mixin(exports
+  ,require("./lib/file-server")
+  ,require("./lib/auto-index")
+  ,require("./lib/directory-index")
+  ,require("./lib/error")
+  ,require("./lib/core")
 );
