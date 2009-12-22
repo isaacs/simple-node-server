@@ -1,23 +1,15 @@
 // a reasonable example.
 // file serving, directory indexing, autoindexes.
 
-var sns = require("./sns");
+var sns = require("./sns"),
+  docroot = require("path").join(__filename, "../www");
 
 sns.start({
   modules : [
-    sns.directoryIndex,
-    sns.autoIndex,
-    sns.fileServer,
+    sns.directoryIndex(docroot, ["index.ejs","index.html","index.htm"]),
+    sns.autoIndex(docroot, [/\.ico$/]),
+    sns.fileServer(docroot),
     sns.errorServer(404)
   ],
-  docroot : require("path").join(__filename, "../www"),
-  port : 8000,
-  indexFiles : [
-    "index.ejs",
-    "index.html",
-    "index.htm"
-  ],
-  indexIgnore : [
-    /\.ico$/
-  ]
+  port : 8000
 });
