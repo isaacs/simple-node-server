@@ -1,3 +1,6 @@
+// a reasonable example.
+// file serving, directory indexing, autoindexes.
+
 var sns = require("./sns");
 
 sns.start({
@@ -5,7 +8,7 @@ sns.start({
     sns.directoryIndex,
     sns.autoIndex,
     sns.fileServer,
-    sns.errorServer(400, "You sent a request this server doesn't grok")
+    sns.errorServer(404)
   ],
   docroot : require("path").join(__filename, "../www"),
   port : 8000,
