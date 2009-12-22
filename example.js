@@ -5,7 +5,7 @@ var sns = require("./sns"),
   docroot = require("path").join(__filename, "../www");
 
 sns.start({
-  modules : [
+  actions : [
     sns.directoryIndex(docroot, ["index.ejs","index.html","index.htm"]),
     sns.autoIndex(docroot, [/\.ico$/]),
     sns.fileServer(docroot),

@@ -1,7 +1,7 @@
 // the bare minimum.  
 require.async("../sns").addCallback(function (sns) {
   sns.start({
-    modules : [
+    actions : [
       function () {
         this
           .sendHeader(200, {"content-type" : "text/html"})

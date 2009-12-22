@@ -6,7 +6,7 @@ var sns = require("../sns"),
   rootDir = require("path").join(__filename, "../..");
 
 sns.start({
-  modules : [
+  actions : [
     // going to / will index the www dir.
     sns.autoIndex(wwwDir),
     sns.fileServer(wwwDir),

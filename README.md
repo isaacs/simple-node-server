@@ -17,7 +17,6 @@ A simple fast node http server.  More a toolkit than a platform.
 ## Up Next
 
 * Configurable logging statements (dumping everything now, it's perty noisy)
-* The name "module" is problematic. Come up with something different to call them.
 * More eventedness/AOP/etc. A way for plugins to alter the behavior of the server,
   without necessarily being one of the servlets in the chain
 * ejs and markdown parsers
