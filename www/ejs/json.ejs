@@ -1,0 +1,16 @@
+<%
+
+// some dumb caching.
+// still better than stating over and over again.
+var str = this.server._json_stat_example;
+if (!str) {
+  str = this.server._json_stat_example =
+    JSON.stringify(require("posix").stat(__filename).wait());
+}
+
+this.sendHeader(200, {
+	"content-type" : "application/json",
+	"content-length" : str.length
+});
+
+print(str)
