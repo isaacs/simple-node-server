@@ -9,6 +9,7 @@ sns.start({
     sns.resolveFilename(docroot),
     sns.directoryIndex(["index.ejs","index.html","index.htm"]),
     sns.autoIndex({ ignore : [/\.ico$/] }),
+    sns.ejsServer(),
     sns.fileServer(),
     sns.errorServer(404)
   ],
