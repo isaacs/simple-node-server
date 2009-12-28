@@ -1,0 +1,29 @@
+<h1>hello</h1>
+
+"can't get no satisfaction"
+
+<%="world"%>
+
+<%= new Error("testing").stack %>
+
+<% for (var i = 0; i < 5; i ++) {
+	
+	
+	
+	
+	%>
+	<%= +(new Error("iterating").stack.split("\n")[1].split(":")[1]) === 15 %>
+	<% // new Error("iterating").stack.split("\n")[1]
+	%>
+	<%= +(new Error("iterating").stack.split("\n")[1].split(":")[1]) === 18 %>
+<% } %>
+
+<%
+if (Math.floor(Math.random() * 2) === 1) {
+	print("hello")
+} else {
+	print("goodbye");
+}
+%>
+
+<h2>let's see if it worked, neh?</h2>
