@@ -5,10 +5,10 @@ require("../sns").start({
       .sendHeader(200, {"content-type" : "application/json"}, true)
       .sendBody(JSON.stringify(this, function replacer (key, val) {
         if (key[0] === "_") return;
-        if (typeof val === "function") return val.toString() || "[function]";
+        if (typeof val === "function") return val.toString();
         return val;
       }, 2), "binary")
       .finish();
   }],
-  port : 8000
+  port : 8080
 });
