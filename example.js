@@ -6,9 +6,10 @@ var sns = require("./sns"),
 
 sns.start({
   actions : [
-    sns.directoryIndex(docroot, ["index.ejs","index.html","index.htm"]),
-    sns.autoIndex(docroot, [/\.ico$/]),
-    sns.fileServer(docroot),
+    sns.resolveFilename(docroot),
+    sns.directoryIndex(["index.ejs","index.html","index.htm"]),
+    sns.autoIndex({ ignore : [/\.ico$/] }),
+    sns.fileServer(),
     sns.errorServer(404)
   ],
   port : 8000
