@@ -5,8 +5,8 @@ require.async("../sns").addCallback(function (sns) {
       function () {
         this
           .sendHeader(200, {"content-type" : "text/html"})
-          .sendBody("<title>An inline module<p>Hello, world")
-          .finish();
+          .write("<title>An inline module<p>Hello, world")
+          .close();
       }
     ],
     port : 8000
